@@ -1,7 +1,7 @@
 import { Title } from "./components/Title/Title";
 import { List } from "./components/List/List";
 
-function App() {
+export const App = () => {
     return (
         <div className="App">
             <Title />
@@ -9,5 +9,3 @@ function App() {
         </div>
     );
 }
-
-export default App;
