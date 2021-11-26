@@ -1,11 +1,11 @@
 import React from "react";
 import { TaskWrapper, TaskText, TaaskBlock, RemoveButton } from "./Task.styles";
 
-const Task = ({ task, removeTodo, todoCompleted }) => {
+export const Task = ({ task, removeTodo, todoCompleted }) => {
 	return (
 		<TaaskBlock>
 			<p>{task.date}</p>
-			<TaskWrapper>
+			<TaskWrapper onClick={() => todoCompleted(task.id)}>
 				{task.isCompleted ? (
 					<TaskText Completed={"text-decoration: line-through;"}>
 						{task.text}
@@ -13,11 +13,6 @@ const Task = ({ task, removeTodo, todoCompleted }) => {
 				) : (
 					<TaskText>{task.text}</TaskText>
 				)}
-				<input
-					type="checkbox"
-					checked={task.isCompleted}
-					onChange={() => todoCompleted(task.id)}
-				/>
 			</TaskWrapper>
 			<RemoveButton onClick={() => removeTodo(task.id)}>
 				Удалить задание
@@ -25,5 +20,3 @@ const Task = ({ task, removeTodo, todoCompleted }) => {
 		</TaaskBlock>
 	);
 };
-
-export default Task;

@@ -1,5 +1,5 @@
-import Title from "./components/Title/Title";
-import List from "./components/List/List";
+import { Title } from "./components/Title/Title";
+import { List } from "./components/List/List";
 
 function App() {
   return (

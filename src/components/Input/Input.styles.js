@@ -17,4 +17,3 @@ export const StyledInput = styled.input`
 export const AddButton = styled(MyButton)`
 	border-color: green;
 `;
-

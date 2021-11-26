@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { StyledInput, InputBlock, AddButton } from "./Input.styles";
 
-const Input = ({ addTodo }) => {
+export const Input = ({ addTodo }) => {
 	const [value, setValue] = useState("");
 
 	const addTodoInList = () => {
@@ -30,5 +30,3 @@ const Input = ({ addTodo }) => {
 		</InputBlock>
 	);
 };
-
-export default Input;

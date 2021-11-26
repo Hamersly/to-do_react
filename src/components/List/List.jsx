@@ -1,17 +1,15 @@
 import React, { useState } from "react";
 import { nanoid } from "nanoid";
-
 import {
 	ListWrapper,
 	TasksList,
 	RemoveTasksButton,
 	RemoveTasksBlock,
 } from "./List.styles";
+import { Input } from "../Input/Input";
+import { Task } from "../Task/Task";
 
-import Input from "../Input/Input";
-import Task from "../Task/Task";
-
-const List = () => {
+export const List = () => {
 	const [tasks, setTasks] = useState([]);
 
 	const addTodo = (text) => {
@@ -71,5 +69,3 @@ const List = () => {
 		</ListWrapper>
 	);
 };
-
-export default List;

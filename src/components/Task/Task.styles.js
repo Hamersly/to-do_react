@@ -22,5 +22,6 @@ export const RemoveButton = styled(MyButton)`
 `;
 
 export const TaskText = styled.h3`
-	${props => props.Completed};
+	${(props) => props.Completed};
+	word-break: break-all;
 `;
